@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 60vh;
+    width: 20%;
+    
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 10%;
+      background-color: black;
+}
+#full{
+    width: 50%;
+}
+button{
+    width: 20%;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+      background-color: grey;
+      border-radius: 10%;
+}
+.buttonGroup{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 4px 4px 4px 4px;
+    
+ 
+}
+.input{
+    width: 100%;
+  
+
+}
+.input input{
+    width: 100%;
+    height: 20vh;
+         background-color: grey;
+      color: white;
+      border-radius: 10%;
+}
