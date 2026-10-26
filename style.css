@@ -1,55 +1,177 @@
-*{
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.container{
-    height: 100vh;
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #171526, #4b3180, #7955cf);
+}
+
+.container {
+    min-height: 100vh;
     width: 100%;
-    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-.main{
-    height: 60vh;
-    width: 20%;
-    
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    border-radius: 10%;
-      background-color: black;
-}
-#full{
-    width: 50%;
-}
-button{
-    width: 20%;
-    margin-left: 10px;
-    background-color: black;
-    color: white;
-      background-color: grey;
-      border-radius: 10%;
-}
-.buttonGroup{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    column-gap: 20px;
-    margin: 4px 4px 4px 4px;
-    
- 
-}
-.input{
-    width: 100%;
-  
 
+.main {
+    width: 390px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border-radius: 30px;
+    background: #181824;
+    border: 1px solid #393650;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
-.input input{
+
+/* DISPLAY */
+
+.input {
     width: 100%;
-    height: 20vh;
-         background-color: grey;
-      color: white;
-      border-radius: 10%;
+}
+
+.input input {
+    width: 100%;
+    height: 105px;
+    padding: 18px 20px;
+
+    border: none;
+    outline: none;
+    border-radius: 20px;
+
+    background: #242437;
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 500;
+    text-align: right;
+
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.2),
+        0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* BUTTON AREA */
+
+.buttonGroup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    width: 100%;
+}
+
+/* Your HTML has divs around groups of buttons */
+.buttonGroup > div {
+    display: contents;
+}
+
+/* ALL BUTTONS */
+
+button {
+    width: 100%;
+    height: 58px;
+
+    border: none;
+    border-radius: 17px;
+
+    background: #2d2c42;
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.04);
+
+    transition: 0.15s ease;
+}
+
+button:hover {
+    background: #3a3853;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* C BUTTON */
+
+#full {
+    width: 100%;
+    background: #403653;
+    color: #d0baff;
+}
+
+#full:hover {
+    background: #4b3e60;
+}
+
+/* OPERATORS */
+
+button.operator {
+    background: #7048e8;
+    color: white;
+}
+
+button.operator:hover {
+    background: #805cf0;
+}
+
+/* EQUAL */
+
+#result {
+    background: #b89aff;
+    color: #181824;
+    font-weight: 700;
+}
+
+#result:hover {
+    background: #c5adff;
+}
+
+/* MOBILE */
+
+@media (max-width: 430px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 380px;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .input input {
+        height: 95px;
+        font-size: 36px;
+    }
+
+    .buttonGroup {
+        gap: 9px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 20px;
+        border-radius: 16px;
+    }
 }
